@@ -181,6 +181,7 @@ def search():
     return render_template('results.html', search_text=search_text, results=search_results, price_ranges=price_ranges)
 
 def main():
+    start_time1 = time.time()
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger("ProductScraper")
 
@@ -194,7 +195,8 @@ def main():
         os.makedirs(os.path.dirname(flagname), exist_ok=True)
         with open(flagname, 'w') as flag_file:
             flag_file.write('')
-
+    search_duration = time.time() - start_time1
+    print(f"Search completed in {search_duration * 1000:.2f} ms.")
 if __name__ == "__main__":
     main()
     app.run(debug=True)
