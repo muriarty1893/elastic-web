@@ -12,10 +12,10 @@
         <ul>
         {% for result in results %}
             <li>
-                <h2>{{ result.product_name }}</h2>
-                <p>Prices: {{ result.prices }}</p>
-                <p>Rating Count: {{ result.rating_count }}</p>
-                <p>Attributes: {{ result.attributes }}</p>
+                <h2>{{ result.product_name }}</h2><br>
+                <p>Price : {{ result.prices }}</p><br>
+                <p>Rating Count : {{ result.rating_count }}</p><br>
+                <p>Attributes : {{ result.attributes }}</p><br>
             </li>
         {% endfor %}
         </ul>
