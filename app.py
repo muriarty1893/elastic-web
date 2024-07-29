@@ -142,11 +142,7 @@ def search_products(client, search_text, logger):
                     "range": {
                         "field": "prices",
                         "ranges": [
-                            {"to": 100},
-                            {"from": 100, "to": 300},
-                            {"from": 300, "to": 500},
-                            {"from": 500, "to": 750},
-                            {"from": 750, "to": 1000},
+                            {"to": 0},
                             {"from": 1000}
                         ]
                     }
@@ -196,7 +192,7 @@ def main():
         with open(flagname, 'w') as flag_file:
             flag_file.write('')
     search_duration = time.time() - start_time1
-    print(f"Search completed in {search_duration * 1000:.2f} ms.")
+    #print(f"Search completed in {search_duration * 1000:.2f} ms.")
 if __name__ == "__main__":
     main()
     app.run(debug=True)
