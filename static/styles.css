@@ -4,25 +4,22 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 h1, h2 {
     color: #5a5a5a;
     font-weight: normal;
-}
-
-h1 {
-    font-size: 2em;
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 form {
     margin: 20px 0;
+    text-align: center;
 }
 
 input[type="text"] {
@@ -32,6 +29,7 @@ input[type="text"] {
     border-radius: 5px;
     width: 70%;
     box-sizing: border-box;
+    margin-right: 10px;
 }
 
 button {
@@ -68,6 +66,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .footer {

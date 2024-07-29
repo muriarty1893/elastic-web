@@ -2,25 +2,31 @@
 <html>
 <head>
     <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Search Results for "{{ search_text }}"</h1>
-    <ul>
-    {% for result in results %}
-        <li>
-            <h2>{{ result.product_name }}</h2>
-            <p>Prices: {{ result.prices }}</p>
-            <p>Rating Count: {{ result.rating_count }}</p>
-            <p>Attributes: {{ result.attributes }}</p>
-        </li>
-    {% endfor %}
-    </ul>
-    <h2>Price Ranges</h2>
-    <ul>
-    {% for range in price_ranges %}
-        <li>{{ range.key }} - Doc count: {{ range.doc_count }}</li>
-    {% endfor %}
-    </ul>
-    <a href="/">Back to Search</a>
+    <div class="container">
+        <h1>Search Results for "{{ search_text }}"</h1>
+        <ul>
+        {% for result in results %}
+            <li>
+                <h2>{{ result.product_name }}</h2>
+                <p>Prices: {{ result.prices }}</p>
+                <p>Rating Count: {{ result.rating_count }}</p>
+                <p>Attributes: {{ result.attributes }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+        <h2>Price Ranges</h2>
+        <ul>
+        {% for range in price_ranges %}
+            <li>{{ range.key }} - Doc count: {{ range.doc_count }}</li>
+        {% endfor %}
+        </ul>
+        <a href="/">Back to Search</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Product Search</p>
+    </div>
 </body>
 </html>
