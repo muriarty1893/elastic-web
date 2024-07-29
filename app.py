@@ -8,8 +8,8 @@ import time
 
 app = Flask(__name__)
 
-indexname = "indext20"
-flagname = "flags/indexing_done_70.flag"
+indexname = "indext21"
+flagname = "flags/indexing_done_71.flag"
 
 class Product:
     def __init__(self, product_name=None, prices=None, rating_count=None, attributes=None):
