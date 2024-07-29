@@ -8,8 +8,8 @@ import time
 
 app = Flask(__name__)
 
-indexname = "indext19"
-flagname = "flags/indexing_done_69.flag"
+indexname = "indext20"
+flagname = "flags/indexing_done_70.flag"
 
 class Product:
     def __init__(self, product_name=None, prices=None, rating_count=None, attributes=None):
@@ -142,8 +142,11 @@ def search_products(client, search_text, logger):
                     "range": {
                         "field": "prices",
                         "ranges": [
-                            {"to": 50},
-                            {"from": 50, "to": 1000},
+                            {"to": 100},
+                            {"from": 100, "to": 300},
+                            {"from": 300, "to": 500},
+                            {"from": 500, "to": 750},
+                            {"from": 750, "to": 1000},
                             {"from": 1000}
                         ]
                     }
