@@ -142,7 +142,7 @@ def search_products(client, search_text, logger):
                     "range": {
                         "field": "prices",
                         "ranges": [
-                            {"to": 0},
+                            {"to": 500},
                             {"from": 1000}
                         ]
                     }
