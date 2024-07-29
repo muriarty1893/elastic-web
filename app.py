@@ -170,11 +170,13 @@ def home():
 
 @app.route('/search', methods=['POST'])
 def search():
+    start_time = time.time()
     search_text = request.form['search']
     logger = logging.getLogger("ProductSearch")
     client = create_elastic_client()
     search_results, price_ranges = search_products(client, search_text, logger)
-    return render_template('results.html', search_text=search_text, results=search_results, price_ranges=price_ranges)
+    search_duration = time.time() - start_time
+    return render_template('results.html', search_text=search_text, results=search_results, price_ranges=price_ranges, search_duration=search_duration)
 
 def main():
     start_time1 = time.time()
