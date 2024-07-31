@@ -1,6 +1,6 @@
 from elasticsearch import Elasticsearch, helpers
 
-indexname = "indext22"
+indexname = "indext23"
 
 def create_elastic_client():
     return Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}])

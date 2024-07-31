@@ -9,8 +9,8 @@ from models import Product
 
 app = Flask(__name__)
 
-indexname = "indext22"
-flagname = "flags/indexing_done_72.flag"
+indexname = "indext23"
+flagname = "flags/indexing_done_73.flag"
 
 @app.route('/')
 def home():
