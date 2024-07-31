@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="sidenav">
-        <a href="home.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('products') }}">Products</a>
+        <a href="{{ url_for('about') }}">About</a>
     </div>
+    
 
     <div class="content">
         <h1>Welcome to the Product Search Engine</h1>
