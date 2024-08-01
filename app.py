@@ -12,9 +12,17 @@ app = Flask(__name__)
 indexname = "indext23"
 flagname = "flags/indexing_done_73.flag"
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
+
+@app.route('/products')
+def products():
+    return render_template('products.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/search', methods=['POST'])
 def search():
